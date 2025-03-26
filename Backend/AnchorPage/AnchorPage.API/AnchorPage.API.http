@@ -1,0 +1,6 @@
+@AnchorPage.API_HostAddress = http://localhost:5101
+
+GET {{AnchorPage.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
