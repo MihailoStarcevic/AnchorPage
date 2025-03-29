@@ -9,3 +9,4 @@ D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Debug\
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Debug\net9.0\refint\AnchorPage.Domain.dll
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Debug\net9.0\AnchorPage.Domain.pdb
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Debug\net9.0\ref\AnchorPage.Domain.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Debug\net9.0\AnchorPage.Domain.sourcelink.json

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnchorPage.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b8534bcddb77a109f7739675efff04fcceb3aca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6a7cca8164816483e0054480358ad19dfcbbf67")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnchorPage.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnchorPage.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

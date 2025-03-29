@@ -1,2 +1,4 @@
 # Backend-specific ignores
 .vs/
+appsettings.json
+launchSettings.json

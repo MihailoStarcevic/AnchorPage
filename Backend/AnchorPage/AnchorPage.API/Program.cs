@@ -1,18 +1,52 @@
+using AnchorPage.API.Core;
+using AnchorPage.DataAccess;
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.AzureKeyVault;
+using System.Reflection.Metadata.Ecma335;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//Binding data from configuration file to an instance of appSettings class
+//var appSettings = new AppSettings();
+//builder.Configuration.Bind(appSettings);
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+//builder.Services.AddOpenApi();
 
-var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (builder.Environment.IsProduction())
 {
-    app.MapOpenApi();
+    var keyVaultURL = builder.Configuration.GetSection("KeyVault:KeyVaultURL");
+    var keyVaultClientId = builder.Configuration.GetSection("KeyVault:ClientId");
+    var keyVaultClientSecret = builder.Configuration.GetSection("KeyVault:ClientSecret");
+    var keyVaultDirectoryId = builder.Configuration.GetSection("KeyVault:DirectoryId");
+
+    var credential = new ClientSecretCredential(keyVaultDirectoryId.Value!.ToString(), 
+        keyVaultClientId.Value!.ToString(), keyVaultClientSecret.Value!.ToString());
+
+    builder.Configuration.AddAzureKeyVault(keyVaultURL.Value!.ToString(), keyVaultClientId.Value!.ToString(),
+        keyVaultClientSecret.Value!.ToString(), new DefaultKeyVaultSecretManager());
+
+    var client = new SecretClient(new Uri(keyVaultURL.Value!.ToString()), credential);
+
+    builder.Services.AddDbContext<AnchorPageContext>(options =>
+        options.UseSqlServer(client.GetSecret("ConnectionString").Value.Value.ToString()));
 }
+
+if (builder.Environment.IsDevelopment())
+{
+    //app.MapOpenApi();
+
+    builder.Services.AddDbContext<AnchorPageContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+}
+var app = builder.Build();
 
 app.UseHttpsRedirection();
 

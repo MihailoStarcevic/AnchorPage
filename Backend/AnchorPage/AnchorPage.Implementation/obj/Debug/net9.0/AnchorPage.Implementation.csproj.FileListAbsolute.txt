@@ -1,0 +1,12 @@
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\bin\Debug\net9.0\AnchorPage.Implementation.deps.json
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\bin\Debug\net9.0\AnchorPage.Implementation.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\bin\Debug\net9.0\AnchorPage.Implementation.pdb
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPage.Implementation.GeneratedMSBuildEditorConfig.editorconfig
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPage.Implementation.AssemblyInfoInputs.cache
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPage.Implementation.AssemblyInfo.cs
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPage.Implementation.csproj.CoreCompileInputs.cache
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPage.Implementation.sourcelink.json
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPage.Implementation.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\refint\AnchorPage.Implementation.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPage.Implementation.pdb
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\ref\AnchorPage.Implementation.dll
