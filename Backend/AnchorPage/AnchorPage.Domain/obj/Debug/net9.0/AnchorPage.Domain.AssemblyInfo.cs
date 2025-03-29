@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnchorPage.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6a7cca8164816483e0054480358ad19dfcbbf67")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a2f034064a0cf0018114f8f86c268f4020de0d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnchorPage.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnchorPage.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
