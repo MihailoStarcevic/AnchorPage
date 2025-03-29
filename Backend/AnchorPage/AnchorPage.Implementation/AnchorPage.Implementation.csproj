@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AnchorPage.Application\AnchorPage.Application.csproj" />
+    <ProjectReference Include="..\AnchorPage.DataAccess\AnchorPage.DataAccess.csproj" />
+    <ProjectReference Include="..\AnchorPage.Domain\AnchorPage.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -103,3 +103,7 @@ D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\Microsoft.Rest.ClientRuntime.dll
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\Microsoft.Rest.ClientRuntime.Azure.dll
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\AnchorPage.Application.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\AnchorPage.Implementation.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\AnchorPage.Application.pdb
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\AnchorPage.Implementation.pdb

@@ -26,8 +26,10 @@ namespace AnchorPage.DataAccess
 
         public AnchorPageContext CreateDbContext(string[] args)
         {
+            var test = _configuration.GetConnectionString("DefaultConnection");
+
             var optionsBuilder = new DbContextOptionsBuilder<AnchorPageContext>();
-            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
+            optionsBuilder.UseSqlServer();
 
             return new AnchorPageContext(optionsBuilder.Options);
         }

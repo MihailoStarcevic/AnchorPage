@@ -2760,6 +2760,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "AnchorPage.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/AnchorPage.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AnchorPage.Application.dll": {}
+        }
+      },
       "AnchorPage.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -2785,6 +2795,21 @@
         },
         "runtime": {
           "bin/placeholder/AnchorPage.Domain.dll": {}
+        }
+      },
+      "AnchorPage.Implementation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "AnchorPage.Application": "1.0.0",
+          "AnchorPage.DataAccess": "1.0.0",
+          "AnchorPage.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AnchorPage.Implementation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AnchorPage.Implementation.dll": {}
         }
       }
     }
@@ -8429,6 +8454,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "AnchorPage.Application/1.0.0": {
+      "type": "project",
+      "path": "../AnchorPage.Application/AnchorPage.Application.csproj",
+      "msbuildProject": "../AnchorPage.Application/AnchorPage.Application.csproj"
+    },
     "AnchorPage.DataAccess/1.0.0": {
       "type": "project",
       "path": "../AnchorPage.DataAccess/AnchorPage.DataAccess.csproj",
@@ -8438,11 +8468,19 @@
       "type": "project",
       "path": "../AnchorPage.Domain/AnchorPage.Domain.csproj",
       "msbuildProject": "../AnchorPage.Domain/AnchorPage.Domain.csproj"
+    },
+    "AnchorPage.Implementation/1.0.0": {
+      "type": "project",
+      "path": "../AnchorPage.Implementation/AnchorPage.Implementation.csproj",
+      "msbuildProject": "../AnchorPage.Implementation/AnchorPage.Implementation.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "AnchorPage.Application >= 1.0.0",
       "AnchorPage.DataAccess >= 1.0.0",
+      "AnchorPage.Domain >= 1.0.0",
+      "AnchorPage.Implementation >= 1.0.0",
       "Azure.Identity >= 1.13.2",
       "Azure.Security.KeyVault.Secrets >= 4.7.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.2",
@@ -8481,8 +8519,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "D:\\SSD\\Desktop\\AnchorPage Github\\Backend\\AnchorPage\\AnchorPage.Application\\AnchorPage.Application.csproj": {
+              "projectPath": "D:\\SSD\\Desktop\\AnchorPage Github\\Backend\\AnchorPage\\AnchorPage.Application\\AnchorPage.Application.csproj"
+            },
             "D:\\SSD\\Desktop\\AnchorPage Github\\Backend\\AnchorPage\\AnchorPage.DataAccess\\AnchorPage.DataAccess.csproj": {
               "projectPath": "D:\\SSD\\Desktop\\AnchorPage Github\\Backend\\AnchorPage\\AnchorPage.DataAccess\\AnchorPage.DataAccess.csproj"
+            },
+            "D:\\SSD\\Desktop\\AnchorPage Github\\Backend\\AnchorPage\\AnchorPage.Domain\\AnchorPage.Domain.csproj": {
+              "projectPath": "D:\\SSD\\Desktop\\AnchorPage Github\\Backend\\AnchorPage\\AnchorPage.Domain\\AnchorPage.Domain.csproj"
+            },
+            "D:\\SSD\\Desktop\\AnchorPage Github\\Backend\\AnchorPage\\AnchorPage.Implementation\\AnchorPage.Implementation.csproj": {
+              "projectPath": "D:\\SSD\\Desktop\\AnchorPage Github\\Backend\\AnchorPage\\AnchorPage.Implementation\\AnchorPage.Implementation.csproj"
             }
           }
         }

@@ -10,3 +10,11 @@ D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\ob
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\refint\AnchorPage.Implementation.dll
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPage.Implementation.pdb
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\ref\AnchorPage.Implementation.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\bin\Debug\net9.0\AnchorPage.Application.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\bin\Debug\net9.0\AnchorPage.DataAccess.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\bin\Debug\net9.0\AnchorPage.Domain.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\bin\Debug\net9.0\AnchorPage.Application.pdb
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\bin\Debug\net9.0\AnchorPage.DataAccess.pdb
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\bin\Debug\net9.0\AnchorPage.Domain.pdb
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPage.Implementation.csproj.AssemblyReference.cache
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Implementation\obj\Debug\net9.0\AnchorPa.7356FB99.Up2Date
