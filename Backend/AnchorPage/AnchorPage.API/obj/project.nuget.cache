@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ra9UlguRnYw=",
+  "dgSpecHash": "cLB8+9m3QpE=",
   "success": true,
   "projectFilePath": "D:\\SSD\\Desktop\\AnchorPage Github\\Backend\\AnchorPage\\AnchorPage.API\\AnchorPage.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mihai\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\mihai\\.nuget\\packages\\azure.identity\\1.13.2\\azure.identity.1.13.2.nupkg.sha512",
     "C:\\Users\\mihai\\.nuget\\packages\\azure.security.keyvault.secrets\\4.7.0\\azure.security.keyvault.secrets.4.7.0.nupkg.sha512",
+    "C:\\Users\\mihai\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\mihai\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
     "C:\\Users\\mihai\\.nuget\\packages\\microsoft.azure.keyvault\\2.3.2\\microsoft.azure.keyvault.2.3.2.nupkg.sha512",
     "C:\\Users\\mihai\\.nuget\\packages\\microsoft.azure.keyvault.webkey\\2.0.7\\microsoft.azure.keyvault.webkey.2.0.7.nupkg.sha512",

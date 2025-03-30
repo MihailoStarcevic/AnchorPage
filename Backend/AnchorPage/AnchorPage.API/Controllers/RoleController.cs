@@ -1,5 +1,8 @@
-﻿using AnchorPage.Application.Queries;
+﻿using AnchorPage.Application.Commands;
+using AnchorPage.Application.DataTransfer;
+using AnchorPage.Application.Queries;
 using AnchorPage.Application.Searches;
+using AnchorPage.Implementation.Commands;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -26,20 +29,27 @@ namespace AnchorPage.API.Controllers
 
         // POST api/<RoleController>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody] RoleDto dto, [FromServices] ICreateRoleCommand command)
         {
+            command.Execute(dto);
+            return Ok();
         }
 
         // PUT api/<RoleController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public IActionResult Put(int id, [FromBody] RoleDto dto, [FromServices] IUpdateRoleCommand command)
         {
+            dto.Id = id;
+            command.Execute(dto);
+            return Ok();
         }
 
         // DELETE api/<RoleController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id, [FromServices] IDeleteRoleCommand command)
         {
+            command.Execute(id);
+            return Ok();
         }
     }
 }

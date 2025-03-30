@@ -68,6 +68,14 @@
           }
         }
       },
+      "FluentValidation/11.11.0": {
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.11.0.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/9.0.2": {
         "dependencies": {
           "Microsoft.OpenApi": "1.6.17"
@@ -1630,7 +1638,8 @@
         "dependencies": {
           "AnchorPage.Application": "1.0.0",
           "AnchorPage.DataAccess": "1.0.0",
-          "AnchorPage.Domain": "1.0.0"
+          "AnchorPage.Domain": "1.0.0",
+          "FluentValidation": "11.11.0"
         },
         "runtime": {
           "AnchorPage.Implementation.dll": {
@@ -1667,6 +1676,13 @@
       "sha512": "sha512-uOPCojkm41V4dKTORyGzl3/f/lriKpxSQ43fWDn4StRJBVmbF1F/DNWJhwm207kCnqgE/W9+tskJSimIKHCZkw==",
       "path": "azure.security.keyvault.secrets/4.7.0",
       "hashPath": "azure.security.keyvault.secrets.4.7.0.nupkg.sha512"
+    },
+    "FluentValidation/11.11.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cyIVdQBwSipxWG8MA3Rqox7iNbUNUTK5bfJi9tIdm4CAfH71Oo5ABLP4/QyrUwuakqpUEPGtE43BDddvEehuYw==",
+      "path": "fluentvalidation/11.11.0",
+      "hashPath": "fluentvalidation.11.11.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/9.0.2": {
       "type": "package",

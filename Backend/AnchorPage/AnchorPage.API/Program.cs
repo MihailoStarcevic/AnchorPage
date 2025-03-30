@@ -1,7 +1,10 @@
 using AnchorPage.API.Core;
+using AnchorPage.Application.Commands;
 using AnchorPage.Application.Queries;
 using AnchorPage.DataAccess;
+using AnchorPage.Implementation.Commands;
 using AnchorPage.Implementation.Queries;
+using AnchorPage.Implementation.Validation;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 using Microsoft.EntityFrameworkCore;
@@ -54,6 +57,11 @@ if (builder.Environment.IsDevelopment())
 //Dependency Injection
 
 builder.Services.AddTransient<IGetRolesQuery, GetRolesQuery>();
+builder.Services.AddTransient<ICreateRoleCommand, CreateRoleCommand>();
+builder.Services.AddTransient<IDeleteRoleCommand, DeleteRoleCommand>();
+builder.Services.AddTransient<IUpdateRoleCommand, UpdateRoleCommand>();
+builder.Services.AddTransient<CreateRoleValidator>();
+builder.Services.AddTransient<UpdateRoleValidator>();
 
 
 

@@ -107,3 +107,4 @@ D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\AnchorPage.Implementation.dll
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\AnchorPage.Application.pdb
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\AnchorPage.Implementation.pdb
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\FluentValidation.dll

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AnchorPage.Application.Queries
 {
-    public interface IGetRolesQuery : IQuery<RoleSearch, PagedResponse<ReadRoleDto>>
+    public interface IGetRolesQuery : IQuery<RoleSearch, PagedResponse<RoleDto>>
     {
     }
 }

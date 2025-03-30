@@ -11,7 +11,7 @@ namespace AnchorPage.Application.Queries
         public int TotalCount { get; set; }
         public int CurrentPage { get; set; }
         public int ItemsPerPage { get; set; }
-        public IEnumerable<T> Items { get; set; }
+        public IEnumerable<T> Items { get; set; } = new HashSet<T>();
         public int PagesCount => (int)Math.Ceiling((float)TotalCount / ItemsPerPage);
     }
 }

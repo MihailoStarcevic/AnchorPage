@@ -23,7 +23,7 @@ namespace AnchorPage.Implementation.Queries
 
         public string Name => "Get Roles Query";
 
-        public PagedResponse<ReadRoleDto> Execute(RoleSearch search)
+        public PagedResponse<RoleDto> Execute(RoleSearch search)
         {
             var query = _context.Roles.AsQueryable();
 
@@ -34,17 +34,17 @@ namespace AnchorPage.Implementation.Queries
 
             if (!string.IsNullOrEmpty(search.Description) || !string.IsNullOrWhiteSpace(search.Description))
             {
-                query = query.Where(x => x.Description.ToLower().Contains(search.Description.ToLower()));
+                query = query.Where(x => (x.Description ?? "").ToLower().Contains(search.Description.ToLower()));
             }
 
             var skipCount = search.PerPage * (search.Page - 1);
 
-            var response = new PagedResponse<ReadRoleDto>
+            var response = new PagedResponse<RoleDto>
             {
                 CurrentPage = search.Page,
                 ItemsPerPage = search.PerPage,
                 TotalCount = query.Count(),
-                Items = query.Skip(skipCount).Take(search.PerPage).Select(x => new ReadRoleDto
+                Items = query.Skip(skipCount).Take(search.PerPage).Select(x => new RoleDto
                 { 
                     Id = x.Id,
                     Name = x.Name,

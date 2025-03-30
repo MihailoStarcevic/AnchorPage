@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnchorPage.Application.DataTransfer
 {
-    public class ReadRoleDto
+    public class RoleDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
