@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AnchorPage.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("v1/[controller]")]
     [ApiController]
     public class RoleController : ControllerBase
     {

@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "apis1": {
+      "restored": true,
+      "restoreTime": "2025-03-30T21:02:40.2294706Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2025-03-30T21:02:48.5891521Z"
+    }
+  },
+  "parameters": {}
+}

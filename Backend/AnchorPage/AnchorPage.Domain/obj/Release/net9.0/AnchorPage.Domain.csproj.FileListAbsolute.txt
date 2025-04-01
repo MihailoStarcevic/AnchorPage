@@ -1,0 +1,12 @@
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\bin\Release\net9.0\AnchorPage.Domain.deps.json
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\bin\Release\net9.0\AnchorPage.Domain.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\bin\Release\net9.0\AnchorPage.Domain.pdb
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Release\net9.0\AnchorPage.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Release\net9.0\AnchorPage.Domain.AssemblyInfoInputs.cache
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Release\net9.0\AnchorPage.Domain.AssemblyInfo.cs
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Release\net9.0\AnchorPage.Domain.csproj.CoreCompileInputs.cache
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Release\net9.0\AnchorPage.Domain.sourcelink.json
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Release\net9.0\AnchorPage.Domain.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Release\net9.0\refint\AnchorPage.Domain.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Release\net9.0\AnchorPage.Domain.pdb
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.Domain\obj\Release\net9.0\ref\AnchorPage.Domain.dll

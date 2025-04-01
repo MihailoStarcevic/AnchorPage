@@ -1,0 +1,25 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "AnchorPageAPI.resourceGroupName": {
+      "Name": "AnchorPageAPI.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "sqldatabase"
+    },
+    "AnchorPageAPI.subscriptionId": {
+      "Name": "AnchorPageAPI.subscriptionId",
+      "Type": "subscription",
+      "Value": "e810d5a4-65d5-451d-97c3-7121e1459122"
+    },
+    "AnchorPageAPI.resourceGroupLocation": {
+      "Name": "AnchorPageAPI.resourceGroupLocation",
+      "Type": null,
+      "Value": "germanywestcentral"
+    },
+    "AnchorPageAPI.resourceName": {
+      "Name": "AnchorPageAPI.resourceName",
+      "Type": null,
+      "Value": "AnchorPageAPI"
+    }
+  }
+}
