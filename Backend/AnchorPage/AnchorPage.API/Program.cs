@@ -14,6 +14,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.AzureKeyVault;
 using System.Reflection.Metadata.Ecma335;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using AnchorPage.Application;
+using AnchorPage.Implementation.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -85,7 +87,9 @@ builder.Services.AddTransient<IUpdateRoleCommand, UpdateRoleCommand>();
 builder.Services.AddTransient<CreateRoleValidator>();
 builder.Services.AddTransient<UpdateRoleValidator>();
 
-
+builder.Services.AddTransient<IApplicationActor, FakeApiActor>();
+builder.Services.AddTransient<IUseCaseLogger, ConsoleUseCaseLogger>();
+builder.Services.AddTransient<UseCaseExecutor>();
 
 
 
@@ -93,6 +97,8 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
+app.UseMiddleware<GlobalExceptionHandler>();
 
 app.UseHttpsRedirection();
 

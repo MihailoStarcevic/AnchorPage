@@ -1,4 +1,5 @@
-﻿using AnchorPage.Application.Commands;
+﻿using AnchorPage.Application;
+using AnchorPage.Application.Commands;
 using AnchorPage.Application.DataTransfer;
 using AnchorPage.Application.Queries;
 using AnchorPage.Application.Searches;
@@ -13,11 +14,18 @@ namespace AnchorPage.API.Controllers
     [ApiController]
     public class RoleController : ControllerBase
     {
+        private readonly UseCaseExecutor _executor;
+
+        public RoleController(UseCaseExecutor executor)
+        {
+            _executor = executor;
+        }
+
         // GET: api/<RoleController>
         [HttpGet]
         public IActionResult Get([FromQuery] RoleSearch search, [FromServices] IGetRolesQuery query)
         {
-            return Ok(query.Execute(search));
+            return Ok(_executor.ExecuteQuery(query, search));
         }
 
         // GET api/<RoleController>/5
@@ -31,7 +39,7 @@ namespace AnchorPage.API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] RoleDto dto, [FromServices] ICreateRoleCommand command)
         {
-            command.Execute(dto);
+            _executor.ExecuteCommand(command, dto);
             return Ok();
         }
 
@@ -40,7 +48,7 @@ namespace AnchorPage.API.Controllers
         public IActionResult Put(int id, [FromBody] RoleDto dto, [FromServices] IUpdateRoleCommand command)
         {
             dto.Id = id;
-            command.Execute(dto);
+            _executor.ExecuteCommand(command, dto);
             return Ok();
         }
 
@@ -48,7 +56,7 @@ namespace AnchorPage.API.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id, [FromServices] IDeleteRoleCommand command)
         {
-            command.Execute(id);
+            _executor.ExecuteCommand(command, id);
             return Ok();
         }
     }

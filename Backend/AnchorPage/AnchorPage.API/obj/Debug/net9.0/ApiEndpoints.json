@@ -2,7 +2,7 @@
   {
     "ContainingType": "AnchorPage.API.Controllers.RoleController",
     "Method": "Get",
-    "RelativePath": "api/Role",
+    "RelativePath": "v1/Role",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -33,7 +33,7 @@
   {
     "ContainingType": "AnchorPage.API.Controllers.RoleController",
     "Method": "Post",
-    "RelativePath": "api/Role",
+    "RelativePath": "v1/Role",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -49,7 +49,7 @@
   {
     "ContainingType": "AnchorPage.API.Controllers.RoleController",
     "Method": "Get",
-    "RelativePath": "api/Role/{id}",
+    "RelativePath": "v1/Role/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -75,7 +75,7 @@
   {
     "ContainingType": "AnchorPage.API.Controllers.RoleController",
     "Method": "Put",
-    "RelativePath": "api/Role/{id}",
+    "RelativePath": "v1/Role/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -96,7 +96,7 @@
   {
     "ContainingType": "AnchorPage.API.Controllers.RoleController",
     "Method": "Delete",
-    "RelativePath": "api/Role/{id}",
+    "RelativePath": "v1/Role/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
