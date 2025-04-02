@@ -88,7 +88,7 @@ builder.Services.AddTransient<CreateRoleValidator>();
 builder.Services.AddTransient<UpdateRoleValidator>();
 
 builder.Services.AddTransient<IApplicationActor, FakeApiActor>();
-builder.Services.AddTransient<IUseCaseLogger, ConsoleUseCaseLogger>();
+builder.Services.AddTransient<IUseCaseLogger, DatabaseUseCaseLogger>();
 builder.Services.AddTransient<UseCaseExecutor>();
 
 
