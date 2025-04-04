@@ -112,3 +112,6 @@ D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\BCrypt.Net-Next.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\SSD\Desktop\AnchorPage Github\Backend\AnchorPage\AnchorPage.API\bin\Debug\net9.0\AutoMapper.dll

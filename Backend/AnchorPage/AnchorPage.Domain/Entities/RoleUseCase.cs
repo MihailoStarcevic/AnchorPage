@@ -11,7 +11,7 @@ namespace AnchorPage.Domain.Entities
         public int RoleId { get; set; }
         public int UseCaseId { get; set; }
 
-        public virtual required Role Role { get; set; }
-        public virtual required UseCase UseCase { get; set; }
+        public virtual Role Role { get; set; }
+        public virtual UseCase UseCase { get; set; }
     }
 }

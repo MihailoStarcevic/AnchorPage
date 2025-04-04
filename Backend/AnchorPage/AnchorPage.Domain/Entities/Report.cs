@@ -16,7 +16,7 @@ namespace AnchorPage.Domain.Entities
         public string SenderLastName { get; set; } = string.Empty;
         public string SenderEmail { get; set; } = string.Empty;
 
-        public virtual required ReportType ReportType { get; set; }
+        public virtual ReportType ReportType { get; set; }
     }
 
     public enum ReportStatus

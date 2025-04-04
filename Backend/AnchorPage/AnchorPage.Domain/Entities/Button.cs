@@ -19,7 +19,7 @@ namespace AnchorPage.Domain.Entities
         public string? StrokeColor { get; set; }
         public int? StrokeWeight { get; set; }
 
-        public virtual required Section Section { get; set; }
+        public virtual Section Section { get; set; }
         public virtual Animation Animation { get; set; }
     }
 }

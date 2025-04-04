@@ -15,8 +15,8 @@ namespace AnchorPage.Domain.Entities
         public bool IsVisible { get; set; } = true;
         public DateTime CreatedAt { get; set; }
 
-        public virtual required User User { get; set; }
-        public virtual required Section Section { get; set; }
+        public virtual User User { get; set; }
+        public virtual Section Section { get; set; }
         public virtual Comment ParentComment { get; set; }
         public virtual ICollection<Comment> ChildComments { get; set; } = new HashSet<Comment>();
     }

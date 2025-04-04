@@ -16,12 +16,17 @@ using System.Reflection.Metadata.Ecma335;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using AnchorPage.Application;
 using AnchorPage.Implementation.Logging;
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using AnchorPage.Implementation.Profiles;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //Binding data from configuration file to an instance of appSettings class
-//var appSettings = new AppSettings();
-//builder.Configuration.Bind(appSettings);
+var appSettings = new AppSettings();
+builder.Configuration.Bind(appSettings);
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -72,10 +77,8 @@ if (builder.Environment.IsDevelopment())
 {
     //app.MapOpenApi();
 
-    var test = builder.Configuration.GetConnectionString("DefaultConnection");
-
     builder.Services.AddDbContext<AnchorPageContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(appSettings.ConnectionString));
 }
 
 //Dependency Injection
@@ -87,11 +90,58 @@ builder.Services.AddTransient<IUpdateRoleCommand, UpdateRoleCommand>();
 builder.Services.AddTransient<CreateRoleValidator>();
 builder.Services.AddTransient<UpdateRoleValidator>();
 
-builder.Services.AddTransient<IApplicationActor, FakeApiActor>();
+builder.Services.AddTransient<ICreateUserCommand, CreateUserCommand>();
+builder.Services.AddTransient<CreateUserValidator>();
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddTransient<IApplicationActor>(x =>
+{
+    var accessor = x.GetService<IHttpContextAccessor>();
+
+    var user = accessor.HttpContext.User;
+    if (user.FindFirst("ActorData") == null)
+    {
+        return new AnonymousActor(); //If user can't be found, an AnonymousActor is made
+    }
+
+    var actorString = user.FindFirst("ActorData").Value;
+    var actor = JsonConvert.DeserializeObject<JwtActor>(actorString);
+    return actor;
+});
+
+builder.Services.AddTransient<JwtManager>(x =>
+{
+    var context = x.GetService<AnchorPageContext>();
+
+    return new JwtManager(context, appSettings.JwtIssuer, appSettings.JwtSecretKey);
+});
+
 builder.Services.AddTransient<IUseCaseLogger, DatabaseUseCaseLogger>();
 builder.Services.AddTransient<UseCaseExecutor>();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(cfg =>
+{
+    cfg.RequireHttpsMetadata = false;
+    cfg.SaveToken = true;
+    cfg.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidIssuer = appSettings.JwtIssuer,
+        ValidateIssuer = true,
+        ValidAudience = "Any",
+        ValidateAudience = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.JwtSecretKey)),
+        ValidateIssuerSigningKey = true,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
+    };
+});
 
 var app = builder.Build();
 

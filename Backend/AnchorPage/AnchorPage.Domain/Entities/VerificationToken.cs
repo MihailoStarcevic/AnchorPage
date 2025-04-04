@@ -13,6 +13,6 @@ namespace AnchorPage.Domain.Entities
         public DateTime CreatedAt { get; set; }
         public DateTime ExpiresAt { get; set; }
 
-        public virtual required User User { get; set; }
+        public virtual User User { get; set; }
     }
 }

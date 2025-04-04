@@ -12,13 +12,13 @@ namespace AnchorPage.Domain.Entities
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
         public string DisplayName { get; set; } = string.Empty;
-        public string ProfilePicture { get; set; } = "default.jpg";
+        public string ProfilePicture { get; set; } = string.Empty;
         public int RoleId { get; set; } = 1;
         public bool IsVerified { get; set; } = false;
         public bool IsActive { get; set; } = true;
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        public virtual required Role Role { get; set; }
+        public virtual Role Role { get; set; }
         public virtual ICollection<Template> Templates { get; set; } = new HashSet<Template>();
         public virtual ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
         public virtual ICollection<VerificationToken> VerificationTokens { get; set; }

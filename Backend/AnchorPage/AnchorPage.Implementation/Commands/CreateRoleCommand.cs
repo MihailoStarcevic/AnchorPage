@@ -3,6 +3,7 @@ using AnchorPage.Application.DataTransfer;
 using AnchorPage.DataAccess;
 using AnchorPage.Domain.Entities;
 using AnchorPage.Implementation.Validation;
+using AutoMapper;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,13 @@ namespace AnchorPage.Implementation.Commands
     {
         private readonly AnchorPageContext _context;
         private readonly CreateRoleValidator _validator;
+        private readonly IMapper _mapper;
 
-        public CreateRoleCommand(AnchorPageContext context, CreateRoleValidator validator)
+        public CreateRoleCommand(AnchorPageContext context, CreateRoleValidator validator, IMapper mapper)
         {
             _context = context;
             _validator = validator;
+            _mapper = mapper;
         }
 
         public int Id => 7;
@@ -31,13 +34,7 @@ namespace AnchorPage.Implementation.Commands
         {
             _validator.ValidateAndThrow(request);
 
-            var role = new Role
-            {
-                Name = request.Name,
-                Description = request.Description
-            };
-
-            _context.Roles.Add(role);
+            _context.Roles.Add(_mapper.Map<Role>(request));
             _context.SaveChanges();
         }
     }

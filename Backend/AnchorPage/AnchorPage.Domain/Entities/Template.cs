@@ -21,7 +21,7 @@ namespace AnchorPage.Domain.Entities
         public int FontWeight { get; set; } = 400;
         public int FontSize { get; set; } = 16;
 
-        public virtual required User User { get; set; }
+        public virtual User User { get; set; }
         public virtual ICollection<Section> Sections { get; set; } = new HashSet<Section>();
     }
 }
