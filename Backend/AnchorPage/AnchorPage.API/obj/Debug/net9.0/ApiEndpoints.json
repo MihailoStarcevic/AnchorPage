@@ -1,5 +1,25 @@
 [
   {
+    "ContainingType": "AnchorPage.API.Controllers.TokenController",
+    "Method": "Get",
+    "RelativePath": "keepalive",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AnchorPage.API.Controllers.RoleController",
     "Method": "Get",
     "RelativePath": "v1/Role",
@@ -104,6 +124,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AnchorPage.API.Controllers.TokenController",
+    "Method": "Post",
+    "RelativePath": "v1/Token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AnchorPage.API.Controllers.TokenController\u002BLoginRequest",
         "IsRequired": true
       }
     ],

@@ -1,4 +1,5 @@
-﻿using AnchorPage.DataAccess;
+﻿using AnchorPage.Application.Exceptions;
+using AnchorPage.DataAccess;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
@@ -21,14 +22,22 @@ namespace AnchorPage.API.Core
             _secretKey = secretKey;
         }
 
-        public string MakeToken(string email, string password)
+        public string MakeToken(string userLogin, string password)
         {
-            string? userPassword = _context.Users.FirstOrDefault(x => x.Email == email)?.Password;
-            bool isPasswordMatch = BCrypt.Net.BCrypt.Verify(password, userPassword);
-            var user = _context.Users.FirstOrDefault(x => x.Email == email && isPasswordMatch);
+            string? userPassword = _context.Users
+                .Where(x => x.Email == userLogin || x.Username == userLogin)
+                .Select(x => x.Password)
+                .FirstOrDefault();
 
-            if (user == null)
+            if (userPassword == null)
                 return null;
+
+            bool isPasswordMatch = BCrypt.Net.BCrypt.Verify(password, userPassword);
+
+            if (!isPasswordMatch)
+                return null;
+
+            var user = _context.Users.FirstOrDefault(x => (x.Email == userLogin || x.Username == userLogin) && isPasswordMatch);
 
             var allowedUseCasesIds = _context.RoleUseCases
                 .Where(ruc => ruc.RoleId == user.RoleId)

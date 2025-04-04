@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnchorPage.Implementation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c36056bbda6996f5606b95947f68f9f56c1cb2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e34b5adc043aaaa785c011a9e46ceb356321bde")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnchorPage.Implementation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnchorPage.Implementation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
